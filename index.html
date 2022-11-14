@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8" />
         <title>Interactive mapping with Mapbox GL JS</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Mapbox files -->
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
@@ -9,9 +11,21 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
+        <h1>Interactive mapping with Mapbox GL JS</h1>
+        <p>This example uses Mapbox GL's 3D capability.</p>
+        <p> It also shows how to ad GeoJSON data to a map and customize the map with clickable popups and a legend. </p>
         <!-- Initialize Map -->
         <div id="map"></div>
-
+        <!-- Adding a legend at the bottom right part of the page. -->
+        <div id='legend'>
+            <h4>Big Bend NP Trails</h4>
+            <ul>
+                <li><hr class="class1"> Class 1 trail: Minimally Developed</li>
+                <li><hr class="class2"> Class 2 trail: Moderately Developed</li>
+                <li><hr class="class3"> Class 3 trail: Developed</li>
+                <li><hr class="boundary"> Park boundary</li>
+            </ul>
+        </div>
         <!-- My JS file -->
         <script src="script.js"></script>
     </body>
